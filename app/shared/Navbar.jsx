@@ -7,11 +7,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navbarItems = [
-    { label: "About", href: "#about", position: "left" },
-    { label: "Programs", href: "#offers", position: "left" },
+    { label: "সম্পর্কে", href: "#about", position: "left" },
+    { label: "কার্যক্রম", href: "#offers", position: "left" },
     { label: "Home", href: "#hero", position: "center" },
-    { label: "Ustads", href: "#ustads", position: "right" },
-    { label: "Contact", href: "#contact", position: "right" },
+    { label: "শিক্ষকগণ", href: "#ustads", position: "right" },
+    { label: "যোগাযোগ", href: "#contact", position: "right" },
   ];
 
   const leftLinks = navbarItems.filter((item) => item.position === "left");

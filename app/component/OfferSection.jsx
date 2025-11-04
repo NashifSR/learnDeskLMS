@@ -21,11 +21,10 @@ const OfferSection = () => {
     <section className="py-20 w-full bg-gradient-to-b from-transparent via-white to-emerald-50 rounded-b-2xl shadow">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-          What We Offer
+          আমরা যা অফার করি
         </h2>
         <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
-          Our madrasa provides both academic and practical education to prepare
-          students for success in this world and the hereafter.
+          আমাদের মাদ্রাসা শিক্ষার্থীদের দুনিয়া ও আখেরাতের সাফল্যের জন্য প্রস্তুত করার জন্য একাডেমিক এবং ব্যবহারিক উভয় শিক্ষা প্রদান করে।
         </p>
 
         <div className="grid md:grid-cols-2 gap-10 mb-12">
@@ -49,7 +48,7 @@ const OfferSection = () => {
             href="tel:+880123456789"
             className="inline-block px-8 py-4 bg-green-600 text-white font-semibold rounded-full shadow-md hover:bg-green-700 transition-all text-lg"
           >
-            Call Now: +880 1234 567 89
+            এখনই কল করুন: ০১৭১১ ২০০ ১০৮
           </a>
         </div>
       </div>

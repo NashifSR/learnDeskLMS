@@ -5,7 +5,6 @@ import { Phone, MessageCircle } from "lucide-react";
 const HeroSection = () => {
   return (
     <section className="relative flex flex-col items-center justify-center min-h-screen w-full text-center gap-6 sm:gap-8 px-4 sm:px-6 md:px-12 overflow-hidden from-transparent via-white to-emerald-50 rounded-b-2xl shadow">
-
       {/* Background pattern */}
       <div
         className="absolute inset-0 bg-[url('/patterns/islamic-pattern.svg')] bg-repeat opacity-5 pointer-events-none"
@@ -18,18 +17,20 @@ const HeroSection = () => {
 
       {/* Main content */}
       <div className="relative z-10 flex flex-col items-center max-w-3xl">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-emerald-800 drop-shadow-lg leading-tight animate-fadeIn">
-          Al Furkan Girls Madrasa
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-extrabold text-emerald-800 drop-shadow-lg leading-tight animate-fadeIn">
+          আল ফুরকান ইসলামিয়া বালিকা মাদ্রাসা
         </h1>
 
         <p className="text-base sm:text-lg md:text-xl italic mt-4 text-gray-700 animate-fadeIn delay-100">
-          “Nurturing Faith, Knowledge, and Character.”
+          “আমরা বিশ্বাস, জ্ঞান এবং চরিত্র বিকাশ করি”
         </p>
 
         <p className="mt-6 text-gray-600 leading-relaxed text-sm sm:text-base md:text-lg animate-fadeIn delay-200">
-          A place where young women grow spiritually, intellectually, and morally.  
-          We blend authentic Islamic education with essential life skills —  
-          preparing our students to live with purpose, confidence, and devotion to Allah.
+          এটি এমন একটি জায়গা যেখানে মেয়েরা সামাজিক, ধর্মীয় এবং নৈতিকভাবে বেড়ে
+          ওঠে। <br></br>
+          আমরা প্রয়োজনীয় জীবন দক্ষতা সহ খাঁটি ইসলামী শিক্ষার জন্য
+          দিকনির্দেশনা প্রদান করি — আমাদের শিক্ষার্থীদের উদ্দেশ্য, আত্মবিশ্বাস
+          এবং ইসলামের প্রতি নিষ্ঠার সাথে জীবনযাপনের জন্য প্রস্তুত করি।
         </p>
 
         {/* Buttons */}
@@ -38,14 +39,14 @@ const HeroSection = () => {
             href="#about"
             className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full font-semibold transition-all shadow-md hover:scale-105"
           >
-            About Our Madrasa
+            আমাদের মাদ্রাসা সম্পর্কে
           </Link>
 
           <Link
             href="tel:+880123456789"
             className="flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-full font-semibold transition-all shadow-md hover:scale-105"
           >
-            <Phone className="w-5 h-5" /> Call Now
+            <Phone className="w-5 h-5" /> এখনই ফোন করুন
           </Link>
 
           <Link

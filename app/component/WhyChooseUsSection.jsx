@@ -5,27 +5,27 @@ const WhyChooseUs = () => {
   const points = [
     {
       icon: <BookOpen className="w-8 h-8 text-green-600" />,
-      title: "Balanced Curriculum",
+      title: "সুষম পাঠ্যক্রম",
       description:
-        "Combines Islamic education with academic and practical skills for holistic student development.",
+        "ছাত্রীদের সামগ্রিক বিকাশের জন্য ইসলামী শিক্ষার সাথে একাডেমিক এবং ব্যবহারিক দক্ষতার সমন্বয় করে।",
     },
     {
       icon: <UserCheck className="w-8 h-8 text-green-600" />,
-      title: "Qualified Teachers",
+      title: "যোগ্য শিক্ষক/শিক্ষিকা",
       description:
-        "Experienced and caring female teachers dedicated to nurturing knowledge, character, and confidence.",
+        "জ্ঞান, চরিত্র এবং আত্মবিশ্বাস লালন করার জন্য নিবেদিতপ্রাণ অভিজ্ঞ এবং যত্নশীল মহিলা শিক্ষক।",
     },
     {
       icon: <Home className="w-8 h-8 text-green-600" />,
-      title: "Safe & Inspiring Environment",
+      title: "নিরাপদ পরিবেশ",
       description:
-        "A secure, positive, and nurturing space for students to learn, grow, and thrive.",
+        "শিক্ষার্থীদের শেখার, বেড়ে ওঠার এবং সমৃদ্ধির জন্য একটি নিরাপদ, ইতিবাচক এবং লালনশীল স্থান।",
     },
     {
       icon: <Star className="w-8 h-8 text-green-600" />,
-      title: "Focus on Character",
+      title: "চারিত্রিক বিকাশের উপর মনোযোগ",
       description:
-        "Emphasizes akhlaq, discipline, and leadership alongside academic excellence.",
+        "শিক্ষাগত উৎকর্ষতার পাশাপাশি আখলাক, শৃঙ্খলা এবং নেতৃত্বের উপর জোর দেয়।",
     },
   ];
 
@@ -35,11 +35,10 @@ const WhyChooseUs = () => {
       className="py-20 px-6 sm:px-12 bg-white text-center relative bg-gradient-to-b from-transparent via-white to-emerald-50 rounded-b-2xl shadow"
     >
       <h2 className="text-3xl sm:text-4xl font-bold text-emerald-800 mb-6">
-        Why Choose Us
+        কেন আমাদের নির্বাচন করবেন
       </h2>
       <p className="max-w-2xl mx-auto text-gray-600 mb-12 text-base sm:text-lg">
-        At Al Furkan Girls Madrasa, we strive to provide the perfect balance of
-        knowledge, values, and personal growth for every student.
+        আল ফুরকান ইসলামিয়া বালিকা মাদ্রাসায়, আমরা প্রতিটি শিক্ষার্থীর জন্য জ্ঞান, মূল্যবোধ এবং ব্যক্তিগত বিকাশের নিখুঁত ভারসাম্য প্রদানের জন্য প্রচেষ্টা করি।
       </p>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">

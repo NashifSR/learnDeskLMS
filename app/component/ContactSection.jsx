@@ -8,10 +8,10 @@ const ContactSection = () => {
       className="py-20 px-6 sm:px-12 text-center bg-gradient-to-b from-transparent via-white to-emerald-50 rounded-b-2xl shadow"
     >
       <h2 className="text-3xl sm:text-4xl font-bold text-emerald-800 mb-6">
-        Contact & Location
+        যোগাযোগ এবং অবস্থান
       </h2>
       <p className="max-w-2xl mx-auto text-gray-600 mb-12 text-base sm:text-lg">
-        Have questions or want to enroll your daughter? Reach out to us via phone, WhatsApp, or our contact form.
+        আপনার কোন প্রশ্ন আছে অথবা আপনার মেয়েকে ভর্তি করতে চান? ফোন, হোয়াটসঅ্যাপ, অথবা আমাদের যোগাযোগ ফর্মের মাধ্যমে আমাদের সাথে যোগাযোগ করুন।
       </p>
 
       <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -19,24 +19,24 @@ const ContactSection = () => {
         <form className="bg-emerald-50 p-8 rounded-2xl shadow-md space-y-4">
           <input
             type="text"
-            placeholder="Your Name"
+            placeholder="আপনার নাম"
             className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-400"
           />
           <input
             type="Phone"
-            placeholder="Phone Number"
+            placeholder="ফোন নাম্বার"
             className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-400"
           />
           <textarea
-            placeholder="Message"
+            placeholder="বার্তা"
             rows="4"
             className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-400"
           />
           <button
-            type="submit"
+            type="পাঠান"
             className="w-full py-3 bg-emerald-600 text-white rounded-full font-semibold hover:bg-emerald-700 transition-all shadow-md"
           >
-            Send Message
+            বার্তা পাঠান
           </button>
         </form>
 
@@ -45,7 +45,7 @@ const ContactSection = () => {
           <div className="flex items-center gap-3">
             <Phone className="w-6 h-6 text-green-600" />
             <a href="tel:+880123456789" className="text-gray-700 hover:text-green-600">
-              +880 171 200 108
+              ০১৭১ ২০০ ১০৮
             </a>
           </div>
           <div className="flex items-center gap-3">
@@ -61,7 +61,7 @@ const ContactSection = () => {
           <div className="flex items-center gap-3">
             <MapPin className="w-6 h-6 text-green-600" />
             <span className="text-gray-700">
-              Al Furkan Girls Madrasa, Professor Para, Near Latifpur Bazar, Gorai, Mirzapur, Tangail
+              আল ফুরকান ইলামিয়া বালিকা মাদ্রাসা, প্রফেসর পাড়া, লতিফপুর বাজারের পাশে, গোড়াই, মির্জাপুর, টাঙ্গাইল
             </span>
           </div>
 
