@@ -31,7 +31,7 @@ const MeetOurMudaris = () => {
   return (
     <section className="py-20 px-6 sm:px-12 text-center bg-gradient-to-b from-transparent via-white to-emerald-50 rounded-b-2xl shadow" id="ustads">
       <h2 className="text-3xl sm:text-4xl font-bold text-emerald-800 mb-6">
-        আমাদের ওস্তাদদের সাথে দেখা করুন
+        আমাদের শিক্ষকদের সাথে দেখা করুন
       </h2>
       <p className="max-w-2xl mx-auto text-gray-600 mb-12 text-base sm:text-lg">
         আমাদের যোগ্য এবং উচ্চশিক্ষিত শিক্ষকরা আপনার মেয়েদের জন্য সর্বোত্তম

@@ -6,7 +6,7 @@ const Testimonials = () => {
     {
       name: "শফিকুল ইসলাম",
       relation: "মুরুব্বি",
-      text: "আল ফুরকান গার্লস মাদরাসা আমাদের এলাকার শিশুদের আধ্যাত্মিক ও শিক্ষাগত বিকাশে অনন্য অবদান রাখছে। শিক্ষকগণ খুব যত্নশীল এবং পথপ্রদর্শক।",
+      text: "আল ফুরক্বান গার্লস মাদরাসা আমাদের এলাকার শিশুদের আধ্যাত্মিক ও শিক্ষাগত বিকাশে অনন্য অবদান রাখছে। শিক্ষকগণ খুব যত্নশীল এবং পথপ্রদর্শক।",
     },
     {
       name: "মাহফুজুর রহমান",
@@ -31,11 +31,10 @@ const Testimonials = () => {
       className="py-20 px-6 sm:px-12 text-center bg-gradient-to-b from-transparent via-white to-emerald-50 rounded-b-2xl shadow"
     >
       <h2 className="text-3xl sm:text-4xl font-bold text-emerald-800 mb-6">
-        Testimonials
+        টেস্টিমনিয়াল
       </h2>
       <p className="max-w-2xl mx-auto text-gray-600 mb-12 text-base sm:text-lg">
-        Hear what parents and students have to say about Al Furkan Girls
-        Madrasa.
+        শিক্ষার্থী এবং তাদের পিতামাতা আল ফুরক্বান ইসলামিয়া বালিকা মাদ্রাসা সম্পর্কে কি বলে দেখুন
       </p>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">

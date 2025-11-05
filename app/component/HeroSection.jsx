@@ -18,7 +18,7 @@ const HeroSection = () => {
       {/* Main content */}
       <div className="relative z-10 flex flex-col items-center max-w-3xl">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-extrabold text-emerald-800 drop-shadow-lg leading-tight animate-fadeIn">
-          আল ফুরকান ইসলামিয়া বালিকা মাদ্রাসা
+          আল ফুরক্বান ইসলামিয়া বালিকা মাদ্রাসা
         </h1>
 
         <p className="text-base sm:text-lg md:text-xl italic mt-4 text-gray-700 animate-fadeIn delay-100">

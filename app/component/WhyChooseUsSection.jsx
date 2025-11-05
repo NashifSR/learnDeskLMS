@@ -35,10 +35,10 @@ const WhyChooseUs = () => {
       className="py-20 px-6 sm:px-12 bg-white text-center relative bg-gradient-to-b from-transparent via-white to-emerald-50 rounded-b-2xl shadow"
     >
       <h2 className="text-3xl sm:text-4xl font-bold text-emerald-800 mb-6">
-        কেন আমাদের নির্বাচন করবেন
+        কেন আমাদের বেছে নিবেন
       </h2>
       <p className="max-w-2xl mx-auto text-gray-600 mb-12 text-base sm:text-lg">
-        আল ফুরকান ইসলামিয়া বালিকা মাদ্রাসায়, আমরা প্রতিটি শিক্ষার্থীর জন্য জ্ঞান, মূল্যবোধ এবং ব্যক্তিগত বিকাশের নিখুঁত ভারসাম্য প্রদানের জন্য প্রচেষ্টা করি।
+        আল ফুরক্বান ইসলামিয়া বালিকা মাদ্রাসায়, আমরা প্রতিটি শিক্ষার্থীর জন্য জ্ঞান, মূল্যবোধ এবং ব্যক্তিগত বিকাশের নিখুঁত ভারসাম্য প্রদানের জন্য প্রচেষ্টা করি।
       </p>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">

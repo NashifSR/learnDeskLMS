@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navbarItems = [
-    { label: "সম্পর্কে", href: "#about", position: "left" },
+    { label: "পরিচিতি", href: "#about", position: "left" },
     { label: "কার্যক্রম", href: "#offers", position: "left" },
     { label: "Home", href: "#hero", position: "center" },
     { label: "শিক্ষকগণ", href: "#ustads", position: "right" },
@@ -26,7 +26,7 @@ const Navbar = () => {
           <Link
             key={index}
             href={link.href}
-            className="text-gray-700 hover:text-emerald-600 font-medium transition-colors"
+            className="text-gray-700 hover:text-emerald-600  py-2 rounded-3xl bg-white shadow-amber-400 text-center w-[100px] font-medium transition-colors"
           >
             {link.label}
           </Link>
@@ -44,12 +44,12 @@ const Navbar = () => {
       </div>
 
       {/* Right links - desktop */}
-      <div className="hidden md:flex space-x-6">
+      <div className="hidden md:flex space-x-6 ">
         {rightLinks.map((link, index) => (
           <Link
             key={index}
             href={link.href}
-            className="text-gray-700 hover:text-emerald-600 font-medium transition-colors"
+            className="text-gray-700 hover:text-emerald-600 font-medium transition-colors  py-2 rounded-3xl bg-white shadow-amber-400 text-center w-[100px] "
           >
             {link.label}
           </Link>
