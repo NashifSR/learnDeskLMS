@@ -30,7 +30,6 @@ const useLessons = (url = "/Lessons.json") => {
     fetchLessons();
   }, [fetchLessons]);
 
-  console.log(lessons)
 
   return { lessons, refetch: fetchLessons, isLoading, isError, error };
 };

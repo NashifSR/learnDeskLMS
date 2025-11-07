@@ -17,7 +17,6 @@ const useShortQuestions = () => {
       setLoading(false);
     }
   };
-  console.log("use Short Questions", shortQuestions)
 
   useEffect(() => {
     fetchQuestions();

@@ -1,16 +1,21 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'next/navigation';
 import useLessons from '@/app/Hooks/useLessons';
 import Link from 'next/link';
-import { useFormStatus } from 'react-dom';
 
-const LessonPage = (params) => {
-  const { userType, courseSlug, lessonSlug } = React.use(params);
+// Placeholder components for MCQs, Short Questions, and Broad Questions
+const MCQ = ({ lessonSlug }) => <div>MCQs for: {lessonSlug}</div>;
+const ShortQ = ({ lessonSlug }) => <div>Short Questions for: {lessonSlug}</div>;
+const BroadQ = ({ lessonSlug }) => <div>Broad Questions for: {lessonSlug}</div>;
+
+const LessonPage = () => {
+  const { userType, courseSlug, lessonSlug } = useParams(); // Get URL params
   const { lessons, isLoading, isError } = useLessons();
-  const [activeTab, setActiveTab] = useFormStatus('mcq'); // 'mcq', 'short', 'broad'
+  const [activeTab, setActiveTab] = useState('mcq'); // Default tab
   const [lessonContent, setLessonContent] = useState(null);
 
-  // Load the lesson data
+  // Load lesson data on mount or when lessons load
   useEffect(() => {
     if (!lessons) return;
 
@@ -46,10 +51,8 @@ const LessonPage = (params) => {
 
   if (isError || !lessonContent) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-emerald-50 via-white to-amber-50">
-        <p className="text-red-600 text-lg">
-          Error loading lesson or lesson not found.
-        </p>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-emerald-50 via-white to-amber-50 p-8">
+        <p className="text-red-600 text-lg">Error loading lesson or lesson not found.</p>
       </div>
     );
   }
@@ -62,17 +65,11 @@ const LessonPage = (params) => {
           All Courses
         </Link>{' '}
         &gt;{' '}
-        <Link
-          href={`/courses/${userType}`}
-          className="text-emerald-600 hover:underline"
-        >
+        <Link href={`/courses/${userType}`} className="text-emerald-600 hover:underline">
           {userType.charAt(0).toUpperCase() + userType.slice(1)}
         </Link>{' '}
         &gt;{' '}
-        <Link
-          href={`/courses/${userType}/${courseSlug}`}
-          className="text-emerald-600 hover:underline"
-        >
+        <Link href={`/courses/${userType}/${courseSlug}`} className="text-emerald-600 hover:underline">
           {lessonContent.courseTitle}
         </Link>{' '}
         &gt; <span className="text-gray-700">{lessonContent.subLesson}</span>
@@ -80,47 +77,26 @@ const LessonPage = (params) => {
 
       {/* Lesson Header */}
       <div className="bg-white rounded-xl shadow-md p-8 mb-6">
-        <h1 className="text-3xl font-bold text-emerald-900 mb-2">
-          {lessonContent.subLesson}
-        </h1>
-        <h2 className="text-xl font-semibold text-emerald-800 mb-4">
-          Subject: {lessonContent.subject}
-        </h2>
+        <h1 className="text-3xl font-bold text-emerald-900 mb-2">{lessonContent.subLesson}</h1>
+        <h2 className="text-xl font-semibold text-emerald-800 mb-4">Subject: {lessonContent.subject}</h2>
         <p className="text-gray-700">{lessonContent.description}</p>
       </div>
 
       {/* Tabs */}
       <div className="flex gap-4 mb-6">
-        <button
-          onClick={() => setActiveTab('mcq')}
-          className={`px-4 py-2 rounded-full font-semibold shadow ${
-            activeTab === 'mcq'
-              ? 'bg-emerald-600 text-white'
-              : 'bg-white text-emerald-700 hover:bg-emerald-100'
-          } transition`}
-        >
-          MCQs
-        </button>
-        <button
-          onClick={() => setActiveTab('short')}
-          className={`px-4 py-2 rounded-full font-semibold shadow ${
-            activeTab === 'short'
-              ? 'bg-emerald-600 text-white'
-              : 'bg-white text-emerald-700 hover:bg-emerald-100'
-          } transition`}
-        >
-          Short Questions
-        </button>
-        <button
-          onClick={() => setActiveTab('broad')}
-          className={`px-4 py-2 rounded-full font-semibold shadow ${
-            activeTab === 'broad'
-              ? 'bg-emerald-600 text-white'
-              : 'bg-white text-emerald-700 hover:bg-emerald-100'
-          } transition`}
-        >
-          Broad Questions
-        </button>
+        {['mcq', 'short', 'broad'].map((tab) => (
+          <button
+            key={tab}
+            onClick={() => setActiveTab(tab)}
+            className={`px-4 py-2 rounded-full font-semibold shadow ${
+              activeTab === tab
+                ? 'bg-emerald-600 text-white'
+                : 'bg-white text-emerald-700 hover:bg-emerald-100'
+            } transition`}
+          >
+            {tab === 'mcq' ? 'MCQs' : tab === 'short' ? 'Short Questions' : 'Broad Questions'}
+          </button>
+        ))}
       </div>
 
       {/* Render Active Component */}
