@@ -1,0 +1,122 @@
+[
+  {
+    "userType": "madrasa",
+    "gradeSlug": "play",
+    "title": "Play: Quran Basics",
+    "description": "Intro to Arabic letters and short surahs",
+    "subject": "Arabic Alphabet",
+    "lessons": ["Letters A-B", "Letters C-D", "Letters E-F", "Letter Review"]
+  },
+  {
+    "userType": "madrasa",
+    "gradeSlug": "play",
+    "title": "Play: Quran Basics",
+    "description": "Intro to Arabic letters and short surahs",
+    "subject": "Short Surahs",
+    "lessons": ["Surah Al-Fatihah", "Surah Al-Ikhlas", "Surah Al-Falaq", "Surah An-Nas"]
+  },
+  {
+    "userType": "madrasa",
+    "gradeSlug": "play",
+    "title": "Play: Quran Basics",
+    "description": "Intro to Arabic letters and short surahs",
+    "subject": "Basic Duas",
+    "lessons": ["Dua Before Eating", "Dua Before Sleeping", "Dua for Parents"]
+  },
+  {
+    "userType": "madrasa",
+    "gradeSlug": "class-1",
+    "title": "Class 1: Quran & Fiqh",
+    "description": "Foundational Quran, daily duas, and basic fiqh",
+    "subject": "Arabic Alphabet",
+    "lessons": ["Letters A-D", "Letters E-H", "Letters I-L", "Letter Review"]
+  },
+  {
+    "userType": "madrasa",
+    "gradeSlug": "class-1",
+    "title": "Class 1: Quran & Fiqh",
+    "description": "Foundational Quran, daily duas, and basic fiqh",
+    "subject": "Short Surahs",
+    "lessons": ["Surah Al-Fatihah", "Surah Al-Ikhlas", "Surah Al-Falaq", "Surah An-Nas", "Surah Al-Masad"]
+  },
+  {
+    "userType": "madrasa",
+    "gradeSlug": "class-1",
+    "title": "Class 1: Quran & Fiqh",
+    "description": "Foundational Quran, daily duas, and basic fiqh",
+    "subject": "Basic Duas",
+    "lessons": ["Dua Before Eating", "Dua Before Sleeping", "Dua for Parents", "Dua for Traveling"]
+  },
+  {
+    "userType": "madrasa",
+    "gradeSlug": "class-2",
+    "title": "Class 2: Quran & Tajweed",
+    "description": "Improve recitation and memorize short surahs",
+    "subject": "Arabic Alphabet",
+    "lessons": ["Letters A-E", "Letters F-J", "Letters K-O", "Letter Review"]
+  },
+  {
+    "userType": "madrasa",
+    "gradeSlug": "class-2",
+    "title": "Class 2: Quran & Tajweed",
+    "description": "Improve recitation and memorize short surahs",
+    "subject": "Short Surahs",
+    "lessons": ["Surah Al-Fatihah", "Surah Al-Ikhlas", "Surah Al-Falaq", "Surah An-Nas", "Surah Al-Kawthar"]
+  },
+  {
+    "userType": "madrasa",
+    "gradeSlug": "class-2",
+    "title": "Class 2: Quran & Tajweed",
+    "description": "Improve recitation and memorize short surahs",
+    "subject": "Basic Duas",
+    "lessons": ["Dua Before Eating", "Dua Before Sleeping", "Dua for Parents", "Dua for Traveling", "Morning Dua"]
+  },
+  {
+    "userType": "madrasa",
+    "gradeSlug": "class-3",
+    "title": "Class 3: Quran & Fiqh",
+    "description": "Advanced memorization and basic fiqh concepts",
+    "subject": "Arabic Alphabet",
+    "lessons": ["Letters A-F", "Letters G-L", "Letters M-R", "Letters S-Z"]
+  },
+  {
+    "userType": "madrasa",
+    "gradeSlug": "class-3",
+    "title": "Class 3: Quran & Fiqh",
+    "description": "Advanced memorization and basic fiqh concepts",
+    "subject": "Short Surahs",
+    "lessons": ["Surah Al-Fatihah", "Surah Al-Ikhlas", "Surah Al-Falaq", "Surah An-Nas", "Surah Al-Kawthar", "Surah Al-Ma'un"]
+  },
+  {
+    "userType": "madrasa",
+    "gradeSlug": "class-3",
+    "title": "Class 3: Quran & Fiqh",
+    "description": "Advanced memorization and basic fiqh concepts",
+    "subject": "Basic Duas",
+    "lessons": ["Dua Before Eating", "Dua Before Sleeping", "Dua for Parents", "Dua for Traveling", "Morning Dua", "Evening Dua"]
+  },
+  {
+    "userType": "madrasa",
+    "gradeSlug": "class-4",
+    "title": "Class 4: Quran & Tajweed",
+    "description": "Tajweed rules and longer surah memorization",
+    "subject": "Arabic Alphabet",
+    "lessons": ["Letters A-G", "Letters H-N", "Letters O-T", "Letters U-Z"]
+  },
+  {
+    "userType": "madrasa",
+    "gradeSlug": "class-4",
+    "title": "Class 4: Quran & Tajweed",
+    "description": "Tajweed rules and longer surah memorization",
+    "subject": "Short Surahs",
+    "lessons": ["Surah Al-Fatihah", "Surah Al-Ikhlas", "Surah Al-Falaq", "Surah An-Nas", "Surah Al-Kawthar", "Surah Al-Ma'un", "Surah Al-Asr"]
+  },
+  {
+    "userType": "madrasa",
+    "gradeSlug": "class-4",
+    "title": "Class 4: Quran & Tajweed",
+    "description": "Tajweed rules and longer surah memorization",
+    "subject": "Basic Duas",
+    "lessons": ["Dua Before Eating", "Dua Before Sleeping", "Dua for Parents", "Dua for Traveling", "Morning Dua", "Evening Dua", "Dua for Forgiveness"]
+  }
+]

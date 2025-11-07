@@ -1,0 +1,68 @@
+{
+  "madrasa": [
+    {
+      "gradeSlug": "play",
+      "title": "Play: Quran Basics",
+      "description": "Intro to Arabic letters and short surahs",
+      "lessons": ["Arabic Alphabet", "Short Surahs", "Basic Duas"]
+    },
+    {
+      "gradeSlug": "class-1",
+      "title": "Class 1: Quran & Fiqh",
+      "description": "Foundational Quran, daily duas, and basic fiqh",
+      "lessons": ["Surah Memorization", "Daily Prayers", "Basic Fiqh"]
+    },
+    {
+      "gradeSlug": "class-2",
+      "title": "Class 2: Quran & Tajweed",
+      "description": "Improve recitation and memorize short surahs",
+      "lessons": ["Tajweed Rules", "Long Surahs", "Daily Duas"]
+    }
+  ],
+  "school": [
+    {
+      "gradeSlug": "class-8",
+      "title": "Class 8",
+      "description": "Comprehensive curriculum for Class 8 students",
+      "subjects": ["Mathematics", "Science", "English", "History", "Geography", "Computer Science", "Islamic Studies"]
+    },
+    {
+      "gradeSlug": "class-9",
+      "title": "Class 9",
+      "description": "Comprehensive curriculum for Class 9 students",
+      "subjects": ["Mathematics", "Science", "English", "History", "Geography", "Computer Science", "Islamic Studies"]
+    },
+    {
+      "gradeSlug": "class-10",
+      "title": "Class 10",
+      "description": "Comprehensive curriculum for Class 10 students",
+      "subjects": ["Mathematics", "Science", "English", "History", "Geography", "Computer Science", "Islamic Studies"]
+    }
+  ],
+  "university": [
+    {
+      "gradeSlug": "semester-1",
+      "title": "Semester 1",
+      "description": "Introductory university courses",
+      "subjects": ["Calculus", "Physics", "Chemistry", "English Literature", "Introduction to Programming", "Economics", "Philosophy"]
+    },
+    {
+      "gradeSlug": "semester-2",
+      "title": "Semester 2",
+      "description": "Second semester university courses",
+      "subjects": ["Linear Algebra", "Biology", "Computer Fundamentals", "Technical Writing", "Microeconomics", "History", "Ethics"]
+    },
+    {
+      "gradeSlug": "semester-3",
+      "title": "Semester 3",
+      "description": "Third semester university courses",
+      "subjects": ["Statistics", "Organic Chemistry", "Data Structures", "English Communication", "Macroeconomics", "Political Science", "Logic"]
+    },
+    {
+      "gradeSlug": "semester-4",
+      "title": "Semester 4",
+      "description": "Fourth semester university courses",
+      "subjects": ["Differential Equations", "Physics Lab", "Algorithms", "Research Methodology", "International Relations", "Sociology", "Ethics & Society"]
+    }
+  ]
+}
