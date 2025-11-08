@@ -8,7 +8,7 @@ const useSystem = () => {
   const [isError, setIsError] = useState(false);
   const [error, setError] = useState(null);
 
-  const API_URL = "/systemClassification1.json"; // Ensure this file is in the public folder
+  const API_URL = "/systemClassification.json"; // Ensure this file is in the public folder
 
   // Fetch function
   const fetchsystem = useCallback(async () => {
