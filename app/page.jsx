@@ -1,3 +1,6 @@
+"use client"
+import Hooker from "./component/Hooker";
+
 const Home = () => {
   return (
     <main className="flex flex-col pt-20 items-center justify-start px-4 sm:px-6 md:px-12 gap-12 ">
@@ -38,6 +41,7 @@ const Home = () => {
             />
           </div>
         </section>
+        <Hooker></Hooker>
       </div>
     </main>
   );

@@ -1,54 +1,63 @@
 'use client';
 import React, { useState } from "react";
 import Link from "next/link";
-
-const coursesData = {
-  madrasa: [
-    { title: "Play: Quran Basics", grade: "Play", description: "Intro to Arabic letters and short surahs" },
-    { title: "Class 1: Quran & Fiqh", grade: "Class 1", description: "Foundational Quran, daily duas, and basic fiqh" },
-    { title: "Class 2: Quran & Tajweed", grade: "Class 2", description: "Improve recitation and memorize short surahs" },
-  ],
-  school: [
-    { title: "Play: Basic Literacy", grade: "Play", description: "Intro to letters, numbers, and colors" },
-    { title: "Class 1: Math & English", grade: "Class 1", description: "Basic math skills and English reading" },
-    { title: "Class 2: Science & History", grade: "Class 2", description: "Introductory science and history" },
-  ],
-  college: [
-    { title: "Class 1: Intro to Science", grade: "First Year", description: "Fundamentals of biology and chemistry" },
-    { title: "Class 2: Advanced Math", grade: "Second Year", description: "Calculus, algebra, and statistics" },
-  ],
-  university: [
-    { title: "Bachelor: Computer Science", grade: "Year 1", description: "Intro to programming and algorithms" },
-    { title: "Bachelor: Mathematics", grade: "Year 1", description: "Linear algebra and calculus" },
-  ]
-};
+import useBooks from "../Hooks/mainHooks/useBooks";
 
 const CoursesPage = () => {
-  const [userType, setUserType] = useState("madrasa"); // This would come from user registration / selection
+  const [userType, setUserType] = useState("madrasa"); // Could come from user selection
   const [selectedGrade, setSelectedGrade] = useState("");
 
-  const courses = coursesData[userType];
-  const grades = [...new Set(courses.map(course => course.grade))];
+  const { books, isLoading, isError } = useBooks();
 
-  const filteredCourses = selectedGrade
-    ? courses.filter(course => course.grade === selectedGrade)
-    : courses;
+  // Early returns for loading and error states
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-emerald-50 via-white to-amber-50">
+        <p className="text-emerald-700 text-lg">Loading books...</p>
+      </div>
+    );
+  }
+
+  if (isError) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-emerald-50 via-white to-amber-50">
+        <p className="text-red-600 text-lg">Failed to load books.</p>
+      </div>
+    );
+  }
+
+  // Filter books by userType and selected grade
+  const filteredBooks = books.filter((book) => {
+    if (!book.system) return false;
+    if (book.system.toLowerCase() !== userType.toLowerCase()) return false;
+    if (selectedGrade && book.level !== selectedGrade) return false;
+    return true;
+  });
+
+  // Extract unique grades for the grade filter buttons
+  const grades = [
+    ...new Set(
+      books
+        .filter((book) => book.system?.toLowerCase() === userType.toLowerCase())
+        .map((book) => book.level)
+    ),
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 via-white to-amber-50 p-8">
-      {/* Hero */}
+      
+      {/* Hero Section */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-emerald-900 mb-4">
           {userType.charAt(0).toUpperCase() + userType.slice(1)} Courses
         </h1>
         <p className="text-gray-700 text-lg">
-          Browse structured courses for your {userType}.
+          Browse structured books for your {userType}.
         </p>
       </div>
 
-      {/* Grade Filters */}
+      {/* Grade Filter Buttons */}
       <div className="flex flex-wrap justify-center gap-4 mb-8">
-        {/* All Classes Button */}
         <button
           onClick={() => setSelectedGrade("")}
           className={`px-4 py-2 rounded-full font-medium shadow ${
@@ -57,7 +66,7 @@ const CoursesPage = () => {
               : "bg-white text-emerald-800 hover:bg-emerald-100"
           } transition`}
         >
-          All Classes
+          All Grades
         </button>
 
         {grades.map((grade, idx) => (
@@ -75,24 +84,49 @@ const CoursesPage = () => {
         ))}
       </div>
 
-      {/* Courses Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredCourses.map((course, idx) => (
-          <div key={idx} className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-            <h2 className="text-xl font-bold text-emerald-900 mb-2">{course.title}</h2>
-            <p className="text-gray-700 mb-4">{course.description}</p>
-            <span className="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm mb-4">
-              {course.grade}
-            </span>
-            <Link
-              href={`/courses/${userType}/${course.grade.toLowerCase().replace(" ", "-")}`}
-              className="block text-center bg-emerald-600 text-white font-semibold py-2 rounded-lg hover:bg-emerald-700 transition"
+      {/* Books Grid */}
+      {filteredBooks.length > 0 ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredBooks.map((book, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition"
             >
-              View Course
-            </Link>
-          </div>
-        ))}
-      </div>
+              <h2 className="text-xl font-bold text-emerald-900 mb-2">
+                {book.bookTitle}
+              </h2>
+              
+              {/* Book Details */}
+              <p className="text-gray-700 mb-2">
+                Chapters: {book.numChapters || "N/A"}
+              </p>
+              <p className="text-gray-700 mb-2">
+                Author: {book.author || "N/A"}
+              </p>
+              <p className="text-gray-700 mb-4">
+                Curriculum: {book.curriculumn || "N/A"}
+              </p>
+
+              {/* Grade Badge */}
+              <span className="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm mb-4">
+                {book.level}
+              </span>
+
+              {/* View Book Button */}
+              <Link
+                href={`/courses/${userType}/${book.bookCode}`}
+                className="block text-center bg-emerald-600 text-white font-semibold py-2 rounded-lg hover:bg-emerald-700 transition"
+              >
+                View Book
+              </Link>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p className="text-gray-700 col-span-full text-center">
+          No books available.
+        </p>
+      )}
     </div>
   );
 };

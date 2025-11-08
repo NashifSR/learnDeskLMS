@@ -1,0 +1,110 @@
+[
+  {
+    "system": "Madrasa",
+    "level": "Play",
+    "bookTitle": "Arabic Alphabet",
+    "bookCode": "MAD-PY-ARAB",
+    "numChapters": 4,
+    "author": "Author Name",
+    "curriculumn": "2025"
+  },
+  {
+    "system": "Madrasa",
+    "level": "Play",
+    "bookTitle": "Short Surahs",
+    "bookCode": "MAD-PY-SURA",
+    "numChapters": 4,
+    "author": "Author Name",
+    "curriculumn": "2025"
+  },
+  {
+    "system": "Madrasa",
+    "level": "Play",
+    "bookTitle": "Basic Duas",
+    "bookCode": "MAD-PY-DUA",
+    "numChapters": 3,
+    "author": "Author Name",
+    "curriculumn": "2025"
+  },
+  {
+    "system": "Madrasa",
+    "level": "Class 4",
+    "bookTitle": "Fiqh",
+    "bookCode": "MAD-04-FIQH",
+    "numChapters": 5,
+    "author": "Author Name",
+    "curriculumn": "2nd"
+  },
+  {
+    "system": "Madrasa",
+    "level": "Class 4",
+    "bookTitle": "Arabic Language",
+    "bookCode": "MAD-04-ARAB",
+    "numChapters": 4,
+    "author": "Author Name",
+    "curriculumn": "2nd"
+  },
+  {
+    "system": "School",
+    "level": "Class 8",
+    "bookTitle": "Mathematics",
+    "bookCode": "SCH-08-MATH",
+    "numChapters": 7,
+    "author": "Author Name",
+    "curriculumn": "3rd"
+  },
+  {
+    "system": "School",
+    "level": "Class 8",
+    "bookTitle": "English",
+    "bookCode": "SCH-08-ENG",
+    "numChapters": 7,
+    "author": "Author Name",
+    "curriculumn": "3rd"
+  },
+  {
+    "system": "School",
+    "level": "Class 8",
+    "bookTitle": "Science",
+    "bookCode": "SCH-08-SCI",
+    "numChapters": 6,
+    "author": "Author Name",
+    "curriculumn": "2nd"
+  },
+  {
+    "system": "School",
+    "level": "Class 8",
+    "bookTitle": "Social Studies",
+    "bookCode": "SCH-08-SOC",
+    "numChapters": 5,
+    "author": "Author Name",
+    "curriculumn": "2nd"
+  },
+  {
+    "system": "School",
+    "level": "Class 9",
+    "bookTitle": "Mathematics",
+    "bookCode": "SCH-09-MATH",
+    "numChapters": 8,
+    "author": "Author Name",
+    "curriculumn": "3rd"
+  },
+  {
+    "system": "School",
+    "level": "Class 9",
+    "bookTitle": "English",
+    "bookCode": "SCH-09-ENG",
+    "numChapters": 8,
+    "author": "Author Name",
+    "curriculumn": "3rd"
+  },
+  {
+    "system": "University",
+    "level": "Semester 1",
+    "bookTitle": "Computer Science",
+    "bookCode": "UNI-S1-CS",
+    "numChapters": 7,
+    "author": "Author Name",
+    "curriculumn": "2025"
+  }
+]

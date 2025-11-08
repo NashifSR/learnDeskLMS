@@ -1,21 +1,63 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'next/navigation';
-import useLessons from '@/app/Hooks/useLessons';
-import Link from 'next/link';
+"use client";
+import React, { useState, useEffect } from "react";
+import { useParams } from "next/navigation";
+import useLessons from "@/app/Hooks/useLessons";
+import Link from "next/link";
+import McqSection from "@/app/courses/courseComponents/McqSection";
 
-// Placeholder components for MCQs, Short Questions, and Broad Questions
-const MCQ = ({ lessonSlug }) => <div>MCQs for: {lessonSlug}</div>;
-const ShortQ = ({ lessonSlug }) => <div>Short Questions for: {lessonSlug}</div>;
-const BroadQ = ({ lessonSlug }) => <div>Broad Questions for: {lessonSlug}</div>;
+// MCQ, Short, and Broad components
+const MCQ = ({ lesson, user, course }) => (
+  <div className="text-gray-700">
+    <p className="font-semibold mb-2">📘 Multiple Choice Questions</p>
+    <p>
+      <strong>Lesson:</strong> {lesson}
+    </p>
+    <p>
+      <strong>Course:</strong> {course}
+    </p>
+    <p>
+      <strong>User Type:</strong> {user}
+    </p>
+  </div>
+);
+
+const ShortQ = ({ lesson, user, course }) => (
+  <div className="text-gray-700">
+    <p className="font-semibold mb-2">📝 Short Questions</p>
+    <p>
+      <strong>Lesson:</strong> {lesson}
+    </p>
+    <p>
+      <strong>Course:</strong> {course}
+    </p>
+    <p>
+      <strong>User Type:</strong> {user}
+    </p>
+  </div>
+);
+
+const BroadQ = ({ lesson, user, course }) => (
+  <div className="text-gray-700">
+    <p className="font-semibold mb-2">📖 Broad Questions</p>
+    <p>
+      <strong>Lesson:</strong> {lesson}
+    </p>
+    <p>
+      <strong>Course:</strong> {course}
+    </p>
+    <p>
+      <strong>User Type:</strong> {user}
+    </p>
+  </div>
+);
 
 const LessonPage = () => {
-  const { userType, courseSlug, lessonSlug } = useParams(); // Get URL params
+  const { userType, courseSlug, lessonSlug } = useParams();
   const { lessons, isLoading, isError } = useLessons();
-  const [activeTab, setActiveTab] = useState('mcq'); // Default tab
+  const [activeTab, setActiveTab] = useState("mcq");
   const [lessonContent, setLessonContent] = useState(null);
 
-  // Load lesson data on mount or when lessons load
+  // Load lesson data
   useEffect(() => {
     if (!lessons) return;
 
@@ -26,7 +68,7 @@ const LessonPage = () => {
     let foundLesson = null;
     courseLessons.forEach((l) => {
       const subLesson = l.lessons.find(
-        (sl) => sl.toLowerCase().replace(/\s+/g, '-') === lessonSlug
+        (sl) => sl.toLowerCase().replace(/\s+/g, "-") === lessonSlug
       );
       if (subLesson) {
         foundLesson = {
@@ -52,7 +94,9 @@ const LessonPage = () => {
   if (isError || !lessonContent) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-emerald-50 via-white to-amber-50 p-8">
-        <p className="text-red-600 text-lg">Error loading lesson or lesson not found.</p>
+        <p className="text-red-600 text-lg">
+          Error loading lesson or lesson not found.
+        </p>
       </div>
     );
   }
@@ -63,47 +107,68 @@ const LessonPage = () => {
       <div className="mb-6 text-sm text-gray-700">
         <Link href="/courses" className="text-emerald-600 hover:underline">
           All Courses
-        </Link>{' '}
-        &gt;{' '}
-        <Link href={`/courses/${userType}`} className="text-emerald-600 hover:underline">
+        </Link>{" "}
+        &gt;{" "}
+        <Link
+          href={`/courses/${userType}`}
+          className="text-emerald-600 hover:underline"
+        >
           {userType.charAt(0).toUpperCase() + userType.slice(1)}
-        </Link>{' '}
-        &gt;{' '}
-        <Link href={`/courses/${userType}/${courseSlug}`} className="text-emerald-600 hover:underline">
+        </Link>{" "}
+        &gt;{" "}
+        <Link
+          href={`/courses/${userType}/${courseSlug}`}
+          className="text-emerald-600 hover:underline"
+        >
           {lessonContent.courseTitle}
-        </Link>{' '}
+        </Link>{" "}
         &gt; <span className="text-gray-700">{lessonContent.subLesson}</span>
       </div>
 
       {/* Lesson Header */}
       <div className="bg-white rounded-xl shadow-md p-8 mb-6">
-        <h1 className="text-3xl font-bold text-emerald-900 mb-2">{lessonContent.subLesson}</h1>
-        <h2 className="text-xl font-semibold text-emerald-800 mb-4">Subject: {lessonContent.subject}</h2>
+        <h1 className="text-3xl font-bold text-emerald-900 mb-2">
+          {lessonContent.subLesson}
+        </h1>
+        <h2 className="text-xl font-semibold text-emerald-800 mb-4">
+          Subject: {lessonContent.subject}
+        </h2>
         <p className="text-gray-700">{lessonContent.description}</p>
       </div>
 
       {/* Tabs */}
       <div className="flex gap-4 mb-6">
-        {['mcq', 'short', 'broad'].map((tab) => (
+        {["mcq", "short", "broad"].map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-4 py-2 rounded-full font-semibold shadow ${
+            className={`px-4 py-2 rounded-full font-semibold shadow transition ${
               activeTab === tab
-                ? 'bg-emerald-600 text-white'
-                : 'bg-white text-emerald-700 hover:bg-emerald-100'
-            } transition`}
+                ? "bg-emerald-600 text-white"
+                : "bg-white text-emerald-700 hover:bg-emerald-100"
+            }`}
           >
-            {tab === 'mcq' ? 'MCQs' : tab === 'short' ? 'Short Questions' : 'Broad Questions'}
+            {tab === "mcq"
+              ? "MCQs"
+              : tab === "short"
+              ? "Short Questions"
+              : "Broad Questions"}
           </button>
         ))}
       </div>
 
-      {/* Render Active Component */}
+      {/* Tab Content */}
       <div className="bg-white rounded-xl shadow-md p-6">
-        {activeTab === 'mcq' && <MCQ lessonSlug={lessonSlug} />}
-        {activeTab === 'short' && <ShortQ lessonSlug={lessonSlug} />}
-        {activeTab === 'broad' && <BroadQ lessonSlug={lessonSlug} />}
+        {activeTab === "mcq" && (
+          // <MCQ lesson={lessonSlug} user={userType} course={courseSlug} />
+          <McqSection lesson={lessonSlug} user={userType} course={courseSlug} ></McqSection>
+        )}
+        {activeTab === "short" && (
+          <ShortQ lesson={lessonSlug} user={userType} course={courseSlug} />
+        )}
+        {activeTab === "broad" && (
+          <BroadQ lesson={lessonSlug} user={userType} course={courseSlug} />
+        )}
       </div>
     </div>
   );
